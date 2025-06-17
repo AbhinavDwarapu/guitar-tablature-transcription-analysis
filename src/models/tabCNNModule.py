@@ -168,7 +168,7 @@ class TabCNNModule(pl.LightningModule):
         """
         loss, preds, targets = self.model_step(batch)
 
-        print(targets)
+        # print(targets)
 
         # update and log metrics
         self.train_loss(loss)
