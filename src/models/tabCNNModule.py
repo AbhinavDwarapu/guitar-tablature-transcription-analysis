@@ -1,7 +1,7 @@
 from typing import Any, Dict, Tuple
 
 import torch
-import pytorch_lightning as pl
+import lightning.pytorch as pl
 from torchmetrics import MaxMetric, MeanMetric
 from torchmetrics.classification.accuracy import Accuracy
 import torch.nn.functional as F
