@@ -16,7 +16,7 @@ class TabDataReprGen:
 
     def __init__(self, mode="c"):
         # file path to the GuitarSet dataset
-        path = "/import/c4dm-datasets/GuitarSet/"
+        path = "/Users/abhinavdwarapu/workspace/guitar-tablature-transcription-analysis/data/GuitarSet/"
         self.path_audio = path + "audio_mono-mic/"
         self.path_anno = path + "annotation/"
         
@@ -49,7 +49,7 @@ class TabDataReprGen:
         self.hop_length = 512
         
         # save file path
-        self.save_path = "/homes/jjl01/GuitarTimbreTransferDiffusion/data/TabCNN_GuitarSet_128/" + self.preproc_mode + "/"
+        self.save_path = "/Users/abhinavdwarapu/workspace/guitar-tablature-transcription-analysis/data/TabCNN_GuitarSet_128/" + self.preproc_mode + "/"
 
     def load_rep_and_labels_from_raw_file(self, filename):
         file_audio = self.path_audio + filename + "_mic.wav"

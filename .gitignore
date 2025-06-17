@@ -163,6 +163,4 @@ configs/local/default.yaml
 # Don't include env files
 *.env
 *.env.*
-*env
-*env*
 
