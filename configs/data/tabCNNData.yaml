@@ -1,7 +1,7 @@
 _target_: src.data.tabCNNData.TabCNNData
 
-data_path: /Users/abhinavdwarapu/workspace/guitar-tablature-transcription-analysis/data/TabCNN_GuitarSet/
 batch_size: 128
+data_path: /Users/abhinavdwarapu/workspace/guitar-tablature-transcription-analysis/data/TabCNN_GuitarSet_128/
 shuffle: True
 spec_repr: c
 con_win_size: 9
