@@ -100,7 +100,7 @@ class TabCNN_GuitarSet(Dataset):
         loaded = np.load(data_dir + filename)
         full_x = np.pad(loaded["repr"], [(self.halfwin,self.halfwin), (0,0)], mode='constant')
         sample_x = full_x[frame_idx : frame_idx + self.con_win_size]
-        X = np.expand_dims(sample_x, 0)
+        X = np.expand_dims(sample_x, 0).astype(np.float32)
 
         # Store label
         y = loaded["labels"][frame_idx]
@@ -110,6 +110,9 @@ class TabCNN_GuitarSet(Dataset):
         class_indices[is_no_class] = y.shape[1]  # This assumes 0-based indexing, thus setting to 'j'
         #print('class_indices: {}'.format(class_indices.shape))
         #return X, class_indices
+
+        X = torch.tensor(X, dtype=torch.float32)
+        y = torch.tensor(y, dtype=torch.float32)
 
         return X, y
 

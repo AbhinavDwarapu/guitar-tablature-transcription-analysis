@@ -14,7 +14,7 @@ log: False
 trainer:
   min_epochs: 1
   max_epochs: 32
-  accelerator: gpu
+  accelerator: mps
   devices: 1
   
 model_checkpoint:

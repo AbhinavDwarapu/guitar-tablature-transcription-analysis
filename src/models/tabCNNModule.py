@@ -57,6 +57,8 @@ class TabCNNModule(pl.LightningModule):
         self.test_tf = MeanMetric()
         self.test_disamb = MeanMetric()
 
+        self = self.float()
+
         # for tracking best so far validation accuracy
         #self.val_acc_best = MaxMetric()
 
