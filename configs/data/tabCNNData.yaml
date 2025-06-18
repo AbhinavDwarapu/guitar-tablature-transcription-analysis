@@ -7,4 +7,4 @@ spec_repr: c
 con_win_size: 9
 val_split: 0.1
 test_split: 0.1
-num_workers: 6
+num_workers: 12

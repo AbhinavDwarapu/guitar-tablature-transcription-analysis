@@ -64,7 +64,7 @@ class TabCNNModule(pl.LightningModule):
 
     def custom_categorical_cross_entropy(self, predictions, targets, epsilon=1e-9):
         N = predictions.shape[0]
-        p = torch.log(predictions)
+        p = torch.log(predictions + epsilon)
         mul = p * targets
         s = torch.sum(mul, dim=2)
         s = torch.sum(s, dim=0)
